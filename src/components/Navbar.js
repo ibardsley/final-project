@@ -8,11 +8,12 @@ function NavBar() {
       <br />
       <Navbar bg="light" variant="light" fixed='top'>
         <Container>
-          <Navbar.Brand href="#home">Todo App</Navbar.Brand>
+          <Navbar.Brand to="/">Todo App</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#list">Todo List</Nav.Link>
-            <Nav.Link href="#update">Update Todo</Nav.Link>
+            <Nav.Link to='/'>Home</Nav.Link>
+            <Nav.Link to='/create'>New Todo</Nav.Link>
+            <Nav.Link to="/read">Todo List</Nav.Link>
+            <Nav.Link to="/update">Update Todo</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

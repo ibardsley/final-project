@@ -14,6 +14,7 @@ function App() {
       <NavBar />
       <div className="main">
         <h2 className='main-header'>Final Project</h2>
+        <br></br>
         <div>
           <Route exact path='/' component={Home} />
         </div>
