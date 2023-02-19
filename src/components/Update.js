@@ -2,8 +2,11 @@ import React, { useEffect, useState }from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
+import { useHistory } from 'react-router';
 
 const Update = () => {
+    let history = useHistory();
+
     const [todoName, setTodoName] = useState('');
     const [todoInfo, setTodoInfo] = useState('');
     const [date, setDate] = useState('');
@@ -24,6 +27,8 @@ const Update = () => {
             todoInfo,
             date,
             checkbox
+        }).then(() => {
+            history.push('/read')
         })
     }
 
@@ -37,10 +42,10 @@ const Update = () => {
         onChange={(e) => setTodoName(e.target.value)}/>
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3" controlId="formBasicInfo">
         <Form.Label>Todo Info</Form.Label>
         <Form.Control 
-        type="password" 
+        type="info" 
         placeholder="Enter Todo Info" 
         value={todoInfo}
         onChange={(e) => setTodoInfo(e.target.value)}/>
@@ -49,7 +54,6 @@ const Update = () => {
         <Form.Label>Due Date</Form.Label>
         <Form.Control
                 type="date"
-                name="datepic"
                 placeholder="DateRange"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
@@ -59,7 +63,7 @@ const Update = () => {
         <Form.Check type="checkbox" label="Add Todo" checked={checkbox} onChange={(e) => setCheckbox(!checkbox)} />
       </Form.Group>
 
-      <Button variant="primary" type="submit" onClick={updateAPIData}>
+      <Button variant="primary" type="button" onClick={updateAPIData}>
         Update
       </Button>
     </Form>

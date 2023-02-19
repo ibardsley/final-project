@@ -2,19 +2,23 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
+import { useHistory } from 'react-router';
 
 function Create() {
+    let history = useHistory();
     const [todoName, setTodoName] = useState('');
     const [todoInfo, setTodoInfo] = useState('');
     const [date, setDate] = useState('');
     const [checkbox, setCheckbox] = useState(false);
     const postData = () => {
-        axios.post('https://63ebe32b31ef61473b1adb7e.mockapi.io/todos', {
+        axios.post(`https://63ebe32b31ef61473b1adb7e.mockapi.io/todos`, {
             todoName,
             todoInfo,
             date,
             checkbox
-        })   
+        }).then(() => {
+            history.push('/read')
+        })
     }
 
 
@@ -27,10 +31,10 @@ function Create() {
         onChange={(e) => setTodoName(e.target.value)}/>
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3" controlId="formBasicInfo">
         <Form.Label>Todo Info</Form.Label>
         <Form.Control 
-        type="password" 
+        type="info" 
         placeholder="Enter Todo Info" 
         onChange={(e) => setTodoInfo(e.target.value)}/>
       </Form.Group>
@@ -38,19 +42,16 @@ function Create() {
         <Form.Label>Due Date</Form.Label>
         <Form.Control
                 type="date"
-                name="datepic"
                 placeholder="DateRange"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
               />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Add Todo" onChange={(e) => setCheckbox(!checkbox)} />
+        <Form.Check type="checkbox" label="Important!" value={''} onChange={(e) => setCheckbox(!checkbox)} />
       </Form.Group>
 
-      <Button variant="primary" type="submit" onClick={postData}>
-        Submit
-      </Button>
+      <Button onClick={postData} type="button">Submit</Button>
     </Form>
   );
 }

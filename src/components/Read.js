@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import Table from 'react-bootstrap/Table';
-import { Button } from 'react-bootstrap';
 
 
 const Read = () => {
@@ -12,7 +10,7 @@ useEffect(() => {
         .then((response) => {
             setAPIData(response.data); 
         })
-})
+}, []);
 
 const setData = (data) => {
     let { id, todoName, todoInfo, date, checkbox } = data;
@@ -38,36 +36,36 @@ const onDelete = (id) => {
 }
 
   return (
-    <div>
-    <Table striped bordered hover variant='primary'>
+    <div className='todoForm'>
+     <table className='read-form'>
       <thead>
         <tr>
           <th>Complete</th>
           <th>Todo Name</th>
           <th>Todo Info</th>
           <th>Due Date</th>
-          <th>Checked</th>
+          <th>Important!</th>
           <th>Update</th>
         </tr>
       </thead>
       <tbody>
         {APIData.map((data) => {
             return (
-                <tr>
-                    <td><input className="form-check-input me-3" type="checkbox"></input></td>
+                <tr key={data.id}>
+                    <td><input className='checkbox' type="checkbox"></input></td>
                     <td>{data.todoName}</td>
                     <td>{data.todoInfo}</td>
                     <td>{data.date}</td>
-                    <td>{data.checkbox ? 'Checked' : 'Unchecked'}</td>
+                    <td>{data.checkbox ? 'Important!' : 'Regular'}</td>
                     <td><Link to='/update'>
-                    <Button onClick={() => setData(data)}>Update</Button>
+                    <button onClick={() => setData(data)}>Update</button>
                     </Link>
-                    <Button onClick={() => onDelete(data.id)}>Delete</Button>
+                    <button onClick={() => onDelete(data.id)}>Delete</button>
                     </td>
                 </tr>
             )})}
       </tbody>
-    </Table>
+     </table>
     </div>
   )
 }
