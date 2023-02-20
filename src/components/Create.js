@@ -51,7 +51,7 @@ function Create() {
         <Form.Check type="checkbox" label="Important!" value={''} onChange={(e) => setCheckbox(!checkbox)} />
       </Form.Group>
 
-      <Button onClick={postData} type="button">Submit</Button>
+      <Button variant='secondary' onClick={postData} type="button">Submit</Button>
     </Form>
   );
 }

@@ -6,6 +6,14 @@
   padding: 0;
 }
 
+.full-page {
+  background: url(https://lafayette.loganfarms.com/wp-content/uploads/2018/11/39967221-blackboard-wallpapers-free-high-resolution-chalkboard-background-5-854259_1080x675.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 .main{
   display: flex;
   flex-direction: column;
@@ -14,14 +22,9 @@
   height: 100vh;
   padding: 0;
   margin: 0;
-  background: url(https://wallpaperaccess.com/full/1489344.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   color: whitesmoke;
 
-  @media screen and (max-width 480px) {
+  @media screen and (max-width: 480px) {
     height: 100%;
     width: 100%
   }
@@ -29,19 +32,22 @@
 
 .main-header {
   font-family: 'chalkboard', sans-serif;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .create-form {
   /* border: 1px solid whitesmoke; */
   color: whitesmoke !important;
-  font-family: 'Barlow', sans-serif;
-  font-size: 12px !important;
+  font-size: 17px !important;
 
-  @media screen and (max-width 480px) {
+  @media screen and (max-width: 480px) {
     height: 100%;
     width: 100%;
   }
+}
+
+.form-label, .form-check {
+  font-family: 'chalkboard', sans-serif;
 }
 
 .read-form {
@@ -54,6 +60,10 @@
   text-align: center;
   vertical-align: middle;
   padding: 10px;
+
+  @media screen and (max-width: 480px) {
+      font-size: 10px;
+  }
 }
 
 
@@ -61,12 +71,58 @@ button {
   font-size: 12px;
   margin: 0 5px;
   padding: 7px;
-  background-color: grey;
-  color: orange;
+  background-color: inherit;
+  color: whitesmoke;
   border-radius: 15px;
 }
 
 .checkbox {
   height: 20px;
   width: 20px;
+}
+
+.card-group {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+li {
+  color: whitesmoke;
+  list-style: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: inherit;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  width: 300px;
+  font-size: 25px;
+  justify-content: space-evenly;
+}
+
+.icon {
+  color: orange;
+  transition: 0.3s ease-in-out;
+}
+
+.icon :hover {
+  color: aqua;
+  transition: 0.2s ease-in-out;
 }

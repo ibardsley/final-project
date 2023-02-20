@@ -60,7 +60,7 @@ const Update = () => {
               />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Add Todo" checked={checkbox} onChange={(e) => setCheckbox(!checkbox)} />
+        <Form.Check type="checkbox" label="Important!" checked={checkbox} onChange={(e) => setCheckbox(!checkbox)} />
       </Form.Group>
 
       <Button variant="primary" type="button" onClick={updateAPIData}>
