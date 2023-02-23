@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <>
       <br />
-      <Navbar bg="light" variant="light" fixed='top'>
+      <Navbar bg="light" variant="light" fixed='top' className='justify-content-center'>
         <Container>
           <Navbar.Brand as={Link} to="/">Todo App</Navbar.Brand>
           <Nav className="me-auto">
@@ -17,6 +17,10 @@ function NavBar() {
             <Nav.Link as={Link} to='/update'>Update Todo</Nav.Link>
           </Nav>
         </Container>
+          <Nav className='me-auto'>
+            <Nav.Link as={Link} to='/About'>About</Nav.Link>
+            <Nav.Link as={Link} to='/Contact'>Contact</Nav.Link>
+          </Nav>
       </Navbar>
     </>
   );

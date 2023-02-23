@@ -6,6 +6,8 @@ import Read from './components/Read'
 import Update from './components/Update'
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
+import About from './components/About';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -16,18 +18,20 @@ function App() {
       <div className="main">
         <h2 className='main-header'>Todo App</h2>
         <br></br>
-        <div>
+        <br></br>
+      
           <Route exact path='/' component={Home} />
-        </div>
-        <div>
+        
           <Route exact path='/create' component={Create} />
-        </div>
-        <div>
+        
           <Route exact path='/read' component={Read} />
-        </div>
-        <div>
-        <Route path='/update' component={Update} />
-        </div>      
+        
+          <Route path='/update' component={Update} />
+
+          <Route path='/About' component={About} />
+
+          <Route path='/Contact' component={Contact} />
+             
       </div>
       <Footer />
     </div>

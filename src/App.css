@@ -12,6 +12,8 @@
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 80%;
+  width: 100%;
 }
 
 .main{
@@ -104,7 +106,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 10%;
   background: inherit;
   color: whitesmoke;
   text-align: center;
@@ -125,4 +127,241 @@ li {
 .icon :hover {
   color: aqua;
   transition: 0.2s ease-in-out;
+}
+
+.wrapper {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+  text-align: center;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 1px; 
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(https://c1.wallpaperflare.com/preview/260/237/126/59687788344d1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.testimonial {
+  padding: 30px 100px;
+}
+
+article h1 {
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+letter-spacing: 1.5px;
+}
+
+article h1::after {
+  height: 5px;
+  width: 225px;
+  background-color: #fff;
+  display: block;
+  margin: auto;
+}
+
+article img {
+border: 2px solid #fff;
+border-radius: 50%;
+margin-top: 60px;
+
+}
+
+blockquote {
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+article h5 {
+  text-transform: uppercase;
+  font-size: 28px;
+  margin-top: 30px;
+  letter-spacing: 1.5px;
+}
+
+article p {
+  font-size: 17px;
+}
+
+.mainContact {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+  background-image:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(https://bestlifeonline.com/wp-content/uploads/sites/3/2017/05/beautiful_places_to_visit_in_europe-wallpaper-2560x1440.jpg?quality=82&strip=all);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 50px 100px;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact .content p {
+  font-weight: 300;
+  color: #fff;
+}
+
+.containerA {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.containerA .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerA .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.containerA .contactInfo .box .iconA {
+  min-width: 50px;
+  height: 50px;
+  background: #fff;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.containerA .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.containerA .contactInfo .box .text h3 {
+  font-weight: 500;
+  color: #00bcd4;
+}
+
+.contactForm {
+  width: 60%;
+  padding: 30px;
+  background: #fff;
+}
+
+.contactForm h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  color: #333;
+}
+
+.contactForm .inputBox input {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type='submit'] {
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+ .full-page {
+  height: 100%;
+ }
+  .contact {
+    padding: 50px;
+  }
+  .containerA {
+    flex-direction: column;
+  }
+  .containerA .contactInfo {
+    margin-bottom: 40px;
+  }
+  .containerA .contactInfo,
+  .contactForm {
+    width: 100%;
+  }
+
 }
