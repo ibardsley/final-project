@@ -33,7 +33,6 @@ function App() {
           <Route path='/Contact' component={Contact} />
              
       </div>
-      <Footer />
     </div>
     </Router>
   );

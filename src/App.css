@@ -38,7 +38,6 @@
 }
 
 .create-form {
-  /* border: 1px solid whitesmoke; */
   color: whitesmoke !important;
   font-size: 17px !important;
 
@@ -57,7 +56,6 @@
 }
 
 .read-form > tr, th, td {
-  /* border: 1px solid whitesmoke; */
   font-family: 'chalkboard', sans-serif;
   text-align: center;
   vertical-align: middle;
@@ -106,9 +104,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10%;
-  background: inherit;
-  color: whitesmoke;
+  height: 10vh;
   text-align: center;
 }
 

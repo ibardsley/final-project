@@ -1,5 +1,6 @@
 import React from 'react'
 import image from '../Headshot.jpg'
+import Footer from './Footer'
 
 const About = () => {
   return (
@@ -16,6 +17,7 @@ const About = () => {
                 <p>Not sure what to put here at the moment</p>
             </article>
         </div>
+        <Footer />
     </div>
   )
 }
