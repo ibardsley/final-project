@@ -8,7 +8,7 @@ const Contact = () => {
     <section className='contact'>
         <div className='content'>
             <h2>Contact Us</h2>
-            <p>test info about whatever I want to say in this particular section of the page so I am just writing nothingness</p>
+            <p>I would love to hear from you if you have any feedback or want more information about what I can offer</p>
         </div>
         <div className='containerA'>
             <div className='contactInfo'>

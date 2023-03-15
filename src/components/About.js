@@ -14,7 +14,7 @@ const About = () => {
                     anyone who needs to keep track of their todo's
                 </blockquote>
                 <h5>John Smith</h5>
-                <p>Not sure what to put here at the moment</p>
+                <p>I am a new developer and excited to start a new career in Front End Development</p>
             </article>
         </div>
         <Footer />

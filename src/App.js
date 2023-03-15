@@ -15,7 +15,7 @@ function App() {
     <div className='full-page'>
       <NavBar />
       <div className="main">
-        <h2 className='main-header'>Todo App</h2>
+        <h2 className='main-header'>To Do App</h2>
         <br></br>
         <br></br>
       
